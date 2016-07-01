@@ -1,0 +1,33 @@
+{
+  "name": "appstore-helper",
+  "version": "1.0.0",
+  "description": "helper for create appstore keys for the Google Play Store (Android) and the App Store (Apple)",
+  "main": "scripts/start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotterfriends/appstore-helper.git"
+  },
+  "keywords": [
+    "applle",
+    "play",
+    "store",
+    "app",
+    "store",
+    "android",
+    "key",
+    "openssl"
+  ],
+  "author": "ANndré Tarnowsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lotterfriends/appstore-helper/issues"
+  },
+  "homepage": "https://github.com/lotterfriends/appstore-helper#readme",
+  "dependencies": {
+    "inquirer": "^1.1.0",
+    "shelljs": "^0.7.0"
+  }
+}
