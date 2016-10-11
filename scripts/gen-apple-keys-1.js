@@ -2,11 +2,10 @@
 
 // see: https://www.iandevlin.com/blog/2012/11/phonegap/building-an-ios-signing-key-for-phonegap-in-windows
 var config = require('../build-config.json');
-var package = require('../package.json');
 var path = require('path');
 var iosFolder = path.join(config.certificateFolder, 'ios');
-var keyFile = path.join(iosFolder, package.name + '.key');
-var csrFile = path.join(iosFolder, package.name + '.csr');
+var keyFile = path.join(iosFolder, config.appName + '.key');
+var csrFile = path.join(iosFolder, config.appName + '.csr');
 var cerFile = path.join(iosFolder, 'ios_development.cer');
 require('shelljs/global');
 

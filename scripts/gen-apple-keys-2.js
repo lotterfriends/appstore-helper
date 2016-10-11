@@ -2,14 +2,13 @@
 
 // see: https://www.iandevlin.com/blog/2012/11/phonegap/building-an-ios-signing-key-for-phonegap-in-windows
 var config = require('../build-config.json');
-var package = require('../package.json');
 var path = require('path');
 var fs = require('fs');
 var iosFolder = path.join(config.certificateFolder, 'ios');
-var pemFile = path.join(iosFolder, package.name + '.pem');
+var pemFile = path.join(iosFolder, config.appName + '.pem');
 var cerFile = path.join(iosFolder, 'ios_development.cer');
-var keyFile = path.join(iosFolder, package.name + '.key');
-var p12File = path.join(iosFolder, package.name + '.p12');
+var keyFile = path.join(iosFolder, config.appName + '.key');
+var p12File = path.join(iosFolder, config.appName + '.p12');
 
 require('shelljs/global');
 

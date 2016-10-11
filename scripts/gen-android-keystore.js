@@ -2,10 +2,9 @@
 
 var config = require('../build-config.json');
 var cordovaBuildFile = '../build.json';
-var package = require('../package.json');
 var path = require('path');
 var fs = require('fs');
-var keystore = path.join(path.resolve(), config.certificateFolder, 'android', package.name + '.keystore');
+var keystore = path.join(path.resolve(), config.certificateFolder, 'android', config.appName + '.keystore');
 // var currentBuildFile = require('../build.json');
 var keystoreExecutable = path.join(process.env.JAVA_HOME, 'bin', 'keytool');
 
@@ -43,7 +42,7 @@ dname.push('C=' + config.publisher.country);
 var keyGenProperties = [];
 keyGenProperties.push('-genkeypair');
 keyGenProperties.push('-v');
-keyGenProperties.push('-alias ' + package.name);
+keyGenProperties.push('-alias "' + config.appName + '"');
 keyGenProperties.push('-keyalg RSA');
 keyGenProperties.push('-keysize 2048');
 keyGenProperties.push('-validity 10000');
@@ -54,7 +53,7 @@ keyGenProperties.push('-keystore ' + keystore);
 
 currentBuildFile.android.release.keystore = keystore;
 currentBuildFile.android.release.storePassword = config.password;
-currentBuildFile.android.release.alias = package.name;
+currentBuildFile.android.release.alias = config.appName;
 currentBuildFile.android.release.password = config.password;
 currentBuildFile.android.release.keystoreType = '';
 fs.writeFile('build.json', JSON.stringify(currentBuildFile, null, 2));

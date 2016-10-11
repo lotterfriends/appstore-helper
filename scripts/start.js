@@ -16,6 +16,14 @@ if (test('-f', buildConfig)) {
 }
 
 inquirer.prompt([
+   {
+    type: 'input',
+    name: 'appName',
+    message: 'App Name (just used for the filenames)',
+    validate: function(input) {
+      return !input.trim().length ? 'Please enter a App Name' : true;
+    }
+  },
   {
     type: 'input',
     name: 'certificateFolder',
@@ -51,6 +59,7 @@ inquirer.prompt([
 ]).then(function (answers) {
   buildConfiguration.certificateFolder = answers.certificateFolder;
   buildConfiguration.password = answers.password;
+  buildConfiguration.appName = answers.appName;
   buildConfiguration.publisher.emailAdress = answers.mail;
   buildConfiguration.publisher.organizationUnit = '.';
   buildConfiguration.publisher.organizationName = answers.organizationName;
