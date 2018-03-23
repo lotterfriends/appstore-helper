@@ -15,9 +15,9 @@ $ node scripts/start
 ```
 3) run platform scripts
 ```sh
-$ run node scripts/gen-apple-keys-1.js
+$ node scripts/gen-apple-keys-1.js
 ```
-or 
+or
 ```sh
-$ run node scripts/gen-android-keystore.js
+$ node scripts/gen-android-keystore.js
 ```

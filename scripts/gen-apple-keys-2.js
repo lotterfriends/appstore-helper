@@ -47,9 +47,9 @@ exec(command2);
 
 
 console.log("###########################################################################################");
-console.log('# now open: https://developer.apple.com > Provisioning Profiles > Development/Distribution > manually generate profiles');
-console.log('# select iOS App Development and create an App ID for your App');
-console.log('# more instructions: http://docs.telerik.com/platform/appbuilder/cordova/code-signing-your-app/configuring-code-signing-for-ios-apps/create-development-provisioning-profile')
+console.log('# 1. open: https://developer.apple.com > Provisioning Profiles > Development/Distribution > manually generate profiles');
+console.log('# 2. select iOS App Development and create an App ID for your App');
+console.log('# 3. more instructions: http://docs.telerik.com/platform/appbuilder/cordova/code-signing-your-app/configuring-code-signing-for-ios-apps/create-development-provisioning-profile')
 console.log("###########################################################################################");
 
 

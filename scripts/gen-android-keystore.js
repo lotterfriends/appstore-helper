@@ -56,7 +56,7 @@ currentBuildFile.android.release.storePassword = config.password;
 currentBuildFile.android.release.alias = config.appName;
 currentBuildFile.android.release.password = config.password;
 currentBuildFile.android.release.keystoreType = '';
-fs.writeFile('build.json', JSON.stringify(currentBuildFile, null, 2));
+fs.writeFileSync('build.json', JSON.stringify(currentBuildFile, null, 2));
 
 // build command
 var command = [path.normalize(keystoreExecutable), keyGenProperties.join(' ')].join(' ');

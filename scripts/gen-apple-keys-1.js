@@ -49,8 +49,8 @@ var command2 = 'openssl ' + command2Parameters.join(' ');
 exec(command2);
 
 console.log("###########################################################################################");
-console.log('# now open: https://developer.apple.com > Certificates > Development > click +');
-console.log('# select iOS App Development and upload "' + csrFile + '"');
-console.log('# put the "ios_development.cer" file in the folder "' + iosFolder + '"');
-console.log('# than continue with ' + __filename.replace(/1/, '2'));
+console.log('# 1. open: https://developer.apple.com > Certificates > Development > click +');
+console.log('# 2. select iOS App Development and upload "' + csrFile + '"');
+console.log('# 3. put the "ios_development.cer" file in the folder "' + iosFolder + '"');
+console.log('# 4. continue with ' + __filename.replace(/1/, '2'));
 console.log("###########################################################################################");
