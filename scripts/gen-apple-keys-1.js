@@ -43,7 +43,7 @@ command2Parameters.push('-new');
 command2Parameters.push('-key ' + keyFile);
 command2Parameters.push('-passin pass:' + config.password);
 command2Parameters.push('-out ' + csrFile);
-command2Parameters.push('-subj "/' + subj.join(', ') + '"');
+command2Parameters.push('-subj "/' + subj.join('/') + '"');
 
 var command2 = 'openssl ' + command2Parameters.join(' ');
 exec(command2);
